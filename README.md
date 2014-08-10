@@ -1,4 +1,4 @@
-# R Scripts and resulting PNG files for Assignment 1
+# R scripts and resulting PNG files for Assignment 1
 
 ## How to use the scripts
 The five scripts (plot1.R, plot2.R, plot3.R, plot4.R and GetData.R) should be

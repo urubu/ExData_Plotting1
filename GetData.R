@@ -9,9 +9,13 @@
 fileName <- "./data/household_power_consumption.txt"
 if(!file.exists(fileName)) {
   # Check if zip archive is present, otherwise download it
-  if(!file.exists("./data/household_power_consumption.zip"){
-    fileURL <- https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip
-    download.file(fileURL, destfile = "./data/household_power_consumption.zip", method="curl")  
+  if(!file.exists("./data/household_power_consumption.zip")){
+    fileURL <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+    if ( .Platform$OS.type  %in% "unix" ) {
+		download.file(fileURL, destfile = "./data/household_power_consumption.zip", method="curl")
+		} else { 
+		download.file(fileURL, destfile = "./data/household_power_consumption.zip")
+	}
   }
   unzip("./data/household_power_consumption.zip", exdir="./data")
 }

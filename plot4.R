@@ -9,7 +9,7 @@ if(!exists("plotData")) source("GetData.R")
 Sys.setlocale("LC_TIME", "English")
 
 # Open PNG device
-png("plot4.png")
+png("plot4.png", type="cairo-png")
 
 # Setup 2 by 2 layout
 par(mfcol = c(2, 2))
@@ -24,7 +24,7 @@ with(plotData, {
   plot(DateTime, Sub_metering_1, type="l", xlab="", ylab = "Energy sub metering")
   lines(DateTime, Sub_metering_2, type="l", col="red")
   lines(DateTime, Sub_metering_3, type="l", col="blue")
-  legend("topright", lty = 1, bty="n", col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+  legend("topright", lty = 1, bty="n", cex=0.9, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
   # Top right plot
   plot(DateTime, Voltage, type="l", xlab="datetime", ylab = "Voltage")

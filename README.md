@@ -20,7 +20,7 @@ GetData.R does this:
 * If not, the script checks whether the zipped archive 'household_power_consumption.zip' is present 
 in the subdirectory 'data'. 
 * If yes, the archive is unzipped. If not, the archive is downloaded first and then unzipped.
-* Following this, the data file 'household_power_consumption.txt' is read and subsetted.
+* Following this, the data file 'household_power_consumption.txt' is read into a dataframe and subsetted.
 
 The plot script then saves its plot in PNG format in the current working directory. 
-The dataframe will be used by subsequent runs of any of the other plot scripts. 
+The resulting dataframe will be used by subsequent runs of any of the other plot scripts. 
